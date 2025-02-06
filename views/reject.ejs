@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h2>Payment Rejected</h2>
+<p>Payment ID: <%= paymentid %></p>
+<p>Amount: <%= details.amount %></p>
+<p>Payee UPI ID: <%= details.payeeUpiId %></p>
+<p>Payee UPI Name: <%= details.payeeUpiName %></p>
+<p>Status: <%= details.status %></p>
+<% if (details.redirectUrl) { %>
+  <p><a href="<%= details.redirectUrl %>">Click here to redirect</a></p>
+<% } %>
+
+<%- include('partials/footer') %>

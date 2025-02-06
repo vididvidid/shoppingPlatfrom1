@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+<h2>Payment Page</h2>
+<form action="/pay/initiate" method="POST">
+    <label>MerchantId:</label>
+  <input type="text" name="merchantid" required>
+  
+  <label>Amount:</label>
+  <input type="number" name="amount" required>
+  
+  <label>Payment ID:</label>
+  <input type="text" name="paymentid" required>
+  
+  <label>Payee UPI ID:</label>
+  <input type="text" name="payeeUpiId" required>
+  
+  <label>Payee UPI Name:</label>
+  <input type="text" name="payeeUpiName" required>
+  
+  <label>Success URL:</label>
+  <input type="text" name="successUrl" placeholder="e.g. /success">
+  
+  <label>Pending URL:</label>
+  <input type="text" name="pendingUrl" placeholder="e.g. /pending">
+  
+  <label>Reject URL:</label>
+  <input type="text" name="rejectUrl" placeholder="e.g. /reject">
+  
+  <label>Redirect URL:</label>
+  <input type="text" name="redirectUrl" placeholder="e.g. /home">
+  
+  <br><br>
+  <input type="submit" value="Pay">
+</form>
+
+<hr>
+
+<h3>Check Payment Status</h3>
+<form action="/pay/status" method="GET">
+  <label>Enter Payment ID:</label>
+  <input type="text" name="paymentid" required>
+  <br><br>
+  <input type="submit" value="Check Status">
+</form>
+
+<%- include('partials/footer') %>

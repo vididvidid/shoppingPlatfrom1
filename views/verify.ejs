@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+<h2>Payment Verification</h2>
+<p>Payment ID: <%= paymentid %></p>
+<p>Status: <%= details.status %></p>
+<p>Amount: <%= details.amount %></p>
+<p>Payee UPI ID: <%= details.payeeUpiId %></p>
+<p>Payee UPI Name: <%= details.payeeUpiName %></p>
+<p>Created At: <%= details.createdAt %></p>
+
+<%- include('partials/footer') %>
